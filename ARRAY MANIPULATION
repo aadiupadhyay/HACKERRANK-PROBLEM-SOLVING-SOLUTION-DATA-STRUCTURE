@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    long long int n,i,a,b,k,m;
+    scanf("%lld%lld",&n ,&m);
+    long long int c[n];
+    for(i=1;i<=n;i++)
+    c[i]=0;
+    while(m>0){
+        scanf("%lld%lld%lld",&a ,&b ,&k);
+        for(i=a;i<=b;i++)
+        c[i]+=k;
+        m-=1;
+    }
+    long long int max=c[1];
+    for(i=1;i<=n;i++)
+    {
+        if(c[i]>max)
+        max=c[i];
+    }
+    printf("%lld",max);
+
+}
