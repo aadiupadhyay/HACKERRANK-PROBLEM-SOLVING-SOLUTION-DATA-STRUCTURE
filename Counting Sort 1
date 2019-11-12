@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int n,i,j,y,a;
+scanf("%d",&n);
+int *A=(int*)malloc(100* sizeof(int));
+
+
+
+for(i=0;i<n;i++){
+    scanf("%d",&y);
+    A[y]++;
+}
+
+for(a=0;a<100;a++){
+    printf("%d ",A[a]);
+}
+return 0;
+}
