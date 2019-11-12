@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+    long int n,k,m,i,p,q;
+    scanf("%ld%ld%ld",&n ,&k ,&q);
+    long int a[n];
+    for(i=0;i<n;i++)
+    scanf("%ld",&a[i]);
+    while(q>0){
+        scanf("%ld",&m);
+        while(k>0){
+            p=a[n-1];
+             for(i=n-2;i>=0;i--)
+            a[i+1]=a[i];
+            a[0]=p;
+            k-=1;
+        } 
+        printf("%ld\n",a[m]);
+        q-=1;
+    }
+}
