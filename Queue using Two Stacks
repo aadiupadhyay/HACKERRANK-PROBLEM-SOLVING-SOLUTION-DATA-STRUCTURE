@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+    long int q,f=-1,r=-1;
+    scanf("%ld",&q);
+    long long int x,a[q]; 
+    int type;
+    while(q>0){
+        scanf("%d",&type);
+        if(type==1){
+            scanf("%lld",&x);
+            if(f==-1 && r==-1){
+                r+=1;
+                f+=1;
+            }
+            else{
+                r+=1;
+            }
+            a[r]=x;
+        }
+        else if(type==2)
+            f+=1;
+        else{
+            printf("%lld\n",a[f]);
+        }
+        q-=1;
+    }
+    
+    
+}
