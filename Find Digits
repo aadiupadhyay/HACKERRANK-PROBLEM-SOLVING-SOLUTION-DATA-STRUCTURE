@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    long long int n;
+    int t;
+    scanf("%d",&t);
+    while(t>0){
+    scanf("%d",&n);
+    long long int temp=n;
+    int c=0,z;
+    while(temp>0){
+        z=temp%10;
+        temp=temp/10;
+        if(z==0)
+        continue;
+        if(n%z==0)
+        c+=1;   
+    }
+    printf("%d\n",c);
+    t-=1;
+    }
+}
