@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int n,i,j,k,s,t;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a[i] );
+    }
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++){
+            if(a[j]==i){
+                for(k=1;k<=n;k++){
+                    if(a[k]==j){
+                        printf("%d\n",k);
+                    }
+                }
+            }
+        }
+    }
+    
+}
