@@ -1,0 +1,10 @@
+int viralAdvertising(int n) {
+    int i,c=2,f=2;
+    for(i=1;i<n;i++){
+        c=(c*3)/2;
+        f=f+c;
+    }
+    return f;
+
+
+}
