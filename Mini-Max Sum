@@ -1,0 +1,31 @@
+#include<stdio.h>
+int minmaxsum(long long int a[])
+{
+    long long int s=0,d,max=0,min=999999999999999;
+    int i;
+     for(i=0;i<5;i++)
+    {
+      s=s+a[i];
+    }
+    for(i=0;i<5;i++)
+    {
+        d=s-a[i];
+        if(d<min)
+        min=d;
+        if(d>max)
+        max=d;
+    }
+    printf("%lld %lld",min,max);
+    return 0;
+}
+int main()
+{
+    long long int a[5];
+    int i;
+    for(i=0;i<5;i++)
+    {
+      scanf("%lld",&a[i]);
+    }
+    minmaxsum(a);
+    
+}
