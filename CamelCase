@@ -1,0 +1,13 @@
+#include<stdio.h>
+#define max 100000
+int main(){
+    char s[max];
+    scanf("%s",s);
+    int i,c=1;
+    for(i=0;s[i]!='\0';i++){
+        if(s[i]>=65 && s[i]<=90)
+        c+=1;
+    }
+    printf("%d",c);
+
+}
