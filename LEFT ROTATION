@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    long int i,ptr,n,d;
+    scanf("%ld",&n);
+    scanf("%ld",&d);
+    long int a[n];
+    for(i=0;i<n;i++)
+    scanf("%ld",&a[i]);
+    long int e=d%n;
+    while(e>0){
+        ptr=a[0];
+        for(i=0;i<n-1;i++){
+            a[i]=a[i+1];
+        }
+        a[n-1]=ptr;
+        e-=1;
+    }
+    for(i=0;i<n;i++)
+    printf("%ld ",a[i]);
+    
+}
