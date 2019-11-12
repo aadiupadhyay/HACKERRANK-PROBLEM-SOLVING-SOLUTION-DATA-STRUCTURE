@@ -1,0 +1,40 @@
+#include<stdio.h>
+int diagonaldifference(int a[][100],int n)
+{
+    int i,d1=0,d2=0,j,d;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+            d1+=a[i][j];
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=n;j>=0;j--)
+        {
+            if(i+j==(n-1))
+            d2+=a[i][j];
+        }
+    }
+    if(d1>d2)
+    return d1-d2;
+    else
+    return d2-d1;
+    
+}
+int main()
+{
+    int i,d1=0,d2=0,j,d,a[100][100],n;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    d=diagonaldifference(a,n);
+    printf("%d",d);
+}
