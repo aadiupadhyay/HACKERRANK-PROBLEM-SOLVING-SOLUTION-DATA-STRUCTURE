@@ -1,0 +1,27 @@
+#include<stdio.h>
+void gradingStudents(int a[],int n)
+{
+    int i,c[100],d;
+    for(i=0;i<n;i++)
+    {
+        c[i]=a[i];
+        while(c[i]%5!=0)
+        {
+        c[i]+=1;
+        }
+        d=c[i]-a[i];
+        if(c[i]>=40 && d<3)
+        a[i]=c[i];
+        
+    }
+    for(i=0;i<n;i++)
+    printf("%d\n",a[i]);
+}
+int main()
+{
+    int n,a[100];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    gradingStudents(a,n);
+}
