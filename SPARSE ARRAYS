@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+        char s[1000][20],m[1000][20];
+        int i,j,c,n,q;
+        scanf("%d",&n);
+        for(i=0;i<n;i++)
+                scanf("%s",s[i]);
+        scanf("%d",&q);
+        for(i=0;i<q;i++)
+                scanf("%s",m[i]);
+        for(i=0;i<q;i++)
+        {
+                c=0;
+                for(j=0;j<n;j++)
+                {
+                        if(strcmp(m[i],s[j])==0)
+                                c++;
+                }
+                printf("%d\n",c);
+        }
+        return 0;
+}
