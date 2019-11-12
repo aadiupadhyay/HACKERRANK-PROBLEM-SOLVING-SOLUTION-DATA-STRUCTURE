@@ -1,0 +1,34 @@
+#include<stdio.h>
+void angryProfessor(int k,int a[],int n){
+    int i=1,c=0;
+    while(i<=n){
+        if(a[i]<=0){
+            c+=1;
+            i++;
+        }
+        else{
+            
+            i++;
+        }
+             
+    }
+      if(c>=k)
+        printf("NO\n");
+        else
+        printf("YES\n"); 
+
+}
+int main(){
+    int i,n,t,k;
+    scanf("%d",&t);
+    while(t>0){
+        scanf("%d%d",&n ,&k);
+        int a[n];
+        for(i=1;i<=n;i++){
+            scanf("%d",&a[i]);
+        }
+        angryProfessor(k,a,n);
+        t-=1;
+    }
+
+}
