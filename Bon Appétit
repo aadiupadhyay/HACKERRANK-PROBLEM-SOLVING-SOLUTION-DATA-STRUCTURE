@@ -1,0 +1,21 @@
+#include<stdio.h>
+void bonAppetit(long int a[],long int n,long int k,long int b){
+    int i;
+    long int s=0,d;
+    for(i=0;i<n;i++)
+    s+=a[i];
+    d=s-a[k];
+    if(d/2==b)
+    printf("Bon Appetit");
+    if(d/2<b)
+    printf("%d",b-d/2);
+}
+int main(){
+    long int i,b,n,k;
+    scanf("%ld%ld",&n ,&k);
+    long int a[n];
+    for(i=0;i<n;i++)
+    scanf("%ld",&a[i] );
+    scanf("%ld",&b);
+    bonAppetit(a,n,k,b);
+}
