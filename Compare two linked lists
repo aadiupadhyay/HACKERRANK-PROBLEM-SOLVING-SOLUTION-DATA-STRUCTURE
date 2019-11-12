@@ -1,0 +1,49 @@
+
+
+// Complete the compare_lists function below.
+
+/*
+ * For your reference:
+ *
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode* next;
+ * };
+ *
+ */
+bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+    int m=0,n=0;
+    SinglyLinkedListNode *ptr1,*ptr2;
+    ptr1=head1;
+    ptr2=head2;
+    while(ptr1->next!=NULL)
+    {
+        m+=1;
+        ptr1=ptr1->next;
+    }
+     while(ptr2->next!=NULL)
+    {
+        n+=1;
+        ptr2=ptr2->next;
+    }
+    ptr1=head1;
+    ptr2=head2;
+    if(m==n)
+        {
+            while(ptr1->next!=NULL && ptr2->next!=NULL)
+            {
+                if(ptr1->data==ptr2->data){
+                    ptr1=ptr1->next;
+                    ptr2=ptr2->next;
+
+                }
+                else
+                return 0;
+            }
+           
+        }
+    else
+    return 0;
+
+        return 1;
+    }
